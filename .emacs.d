@@ -1,0 +1,1 @@
+/home/lumy/Dropbox/dotfiles/.emacs.d
