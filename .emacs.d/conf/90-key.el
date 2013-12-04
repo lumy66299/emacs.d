@@ -30,6 +30,8 @@
 (global-set-key (kbd "M-]") 'point-redo)
 ;; redo+
 (global-set-key (kbd "C-.") 'redo)
+;; direx
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
 
 ;; anything
 ;; M-y にanything-show-kill-ringを割り当てる
