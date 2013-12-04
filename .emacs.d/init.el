@@ -3,15 +3,11 @@
 (add-to-list 'exec-path "/opt/local/bin")
 (add-to-list 'exec-path "/usr/local/bin")
 
-;; Emacs 23より前のバージョンを利用している人
-(when (> emacs-major-version 23)
-  (defvar user-emacs-directory "~/.emacs.d"))
-
 ;; load-path を追加する関数を定義
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
-      (let ((default-derectory
+      (let ((default-directory
 	      (expand-file-name (concat user-emacs-directory path))))
 	(add-to-list 'load-path default-directory)
 	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
@@ -55,11 +51,8 @@
 ;; オートセーブファイル作成までのタイプ間隔
 (setq auto-save-interval 60)
 
-;; GitフロントエンドEggの設定
-(when (executable-find "git")
-  (require 'egg nil t))
-
 ;***********************************************************
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
