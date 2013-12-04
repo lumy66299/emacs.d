@@ -30,3 +30,7 @@
 (global-set-key (kbd "M-]") 'point-redo)
 ;; redo+
 (global-set-key (kbd "C-.") 'redo)
+
+;; anything
+;; M-y にanything-show-kill-ringを割り当てる
+(global-set-key (kbd "M-y") 'anything-show-kill-ring)
